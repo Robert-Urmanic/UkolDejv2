@@ -2,6 +2,8 @@ package com.engeto.urm.dao;
 
 import com.engeto.urm.dto.Cargo;
 import com.engeto.urm.dto.Ship;
+
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 import java.security.SecureRandom;
@@ -27,7 +29,7 @@ public class InitialDemoData {
             ship.setCapacity(new Random().nextInt(101));
             ship.setOnWay(new Random().nextBoolean());
             ship.setCountOfTransports(new Random().nextInt(11));
-            ship.setAverageSpeed(ship.getRandomNumber(30,100));
+            ship.setAverageSpeed(new BigDecimal(ship.getRandomNumber(30,100)));
             listOfShips.add(ship);
             for (int j = 1; j <= 2; j++) {
                 Cargo cargo = new Cargo();

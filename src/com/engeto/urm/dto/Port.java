@@ -10,5 +10,8 @@ public enum Port {
     Salalah,
     Colon,
     Jeddah,
-    Savannah
+    Savannah,
+    Unknown;
+
+
 }

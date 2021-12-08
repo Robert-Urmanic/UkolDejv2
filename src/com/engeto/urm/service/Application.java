@@ -3,6 +3,7 @@ package com.engeto.urm.service;
 import com.engeto.urm.dto.*;
 import com.engeto.urm.dao.*;
 
+import java.math.BigDecimal;
 import java.util.Scanner;
 
 public class Application {
@@ -10,7 +11,7 @@ public class Application {
         InitialDemoData initialDemoData = new InitialDemoData();
         initialDemoData.initialisation();
         Scanner s = new Scanner(System.in);
-
+        Route route = null;
         System.out.println("Chcete vyhledávat lodě? Y/n");
 
         String decision = s.next();
@@ -18,17 +19,10 @@ public class Application {
         if ("Y".equals(decision.toUpperCase())) {
             while (spatnyUdaj) {
 
-                System.out.println("Zadejte ID, nebo jméno: ");
+                System.out.println("Zadejte ID, nebo jméno lodě: ");
                 String NameIDDecision = s.next();
                 try {
-                    int idLode = Integer.parseInt(NameIDDecision);
-
-                    for (Ship tempShip : initialDemoData.getListOfShips()) {
-                        if (tempShip.getId() == idLode) {
-                            System.out.println(tempShip);
-                            spatnyUdaj = false;
-                        }
-                    }
+                    spatnyUdaj = vyhledejID(initialDemoData, spatnyUdaj, NameIDDecision);
                 } catch (NumberFormatException e) {
                     for (Ship tempShip : initialDemoData.getListOfShips()) {
                         if (tempShip.getName().equals(NameIDDecision)) {
@@ -37,10 +31,75 @@ public class Application {
                         }
                     }
                 }
-                if (spatnyUdaj == true) {
-                    System.out.println("Loď s jménem či ID: " + NameIDDecision + " neexistuje.");
+                vytiskniSpatneIDNeboJmenoLode(spatnyUdaj, NameIDDecision);
+            }
+        } else System.exit(80085);
+        boolean spatnyNazevPristavu = true;
+
+        while (spatnyNazevPristavu) {
+            try {
+                Scanner scanPort = new Scanner(System.in);
+                System.out.println("Napiš přístav, ze kterého loď vyjíždí:");
+                Port port1 = Port.valueOf(scanPort.next());
+                System.out.println("Napiš přístav, do kterého loď přijede:");
+                Port port2 = Port.valueOf(scanPort.next());
+                spatnyNazevPristavu = false;
+                System.out.println("Zadejte vzdálenost, kterou loď urazí: ");
+                BigDecimal distanceToTravel = scanPort.nextBigDecimal();
+                spatnyUdaj = true;
+                while (spatnyUdaj) {
+                    System.out.println("Zadejte ID, nebo jméno lodě: ");
+                    String NameIDDecision = s.next();
+                    try {
+                        spatnyUdaj = vyhledejID(initialDemoData, spatnyUdaj, NameIDDecision);
+                        if (spatnyUdaj == false){
+                            Integer id = Integer.parseInt(NameIDDecision);
+                            System.out.println("Chcete spustit simulaci?");
+                            String simulace = s.next();
+                            if ("Y".equals(simulace.toUpperCase())) {
+                                route = new Route(port1, port2, distanceToTravel, id, initialDemoData.getListOfShips());
+                                System.out.println(route);
+                            } else System.exit(69);
+                        }
+                        vytiskniSpatneIDNeboJmenoLode(spatnyUdaj, NameIDDecision);
+                    } catch (NumberFormatException ex) {
+                        System.err.println("Zadali jste špatně ID lodě...");
+                        // Opakovat ?
+                    }
+                }
+
+            } catch (IllegalArgumentException e) {
+                //e.printStackTrace();
+
+                System.err.println("Zvolili jste špatný přístav...");
+                System.out.println("Seznam přístavů:");
+                System.out.println(java.util.Arrays.asList(Port.values()));
+                System.out.println("Chcete to zkusit znovu? Y/n");
+                String opakovat = s.next();
+                if ("N".equals(opakovat.toUpperCase())){
+                    System.exit(5318008);
                 }
             }
         }
     }
+
+    private static void vytiskniSpatneIDNeboJmenoLode(boolean spatnyUdaj, String NameIDDecision) {
+        if (spatnyUdaj == true) {
+            System.out.println("Loď s jménem či ID: " + NameIDDecision + " neexistuje.");
+        }
+    }
+
+    private static boolean vyhledejID(InitialDemoData initialDemoData, boolean spatnyUdaj, String NameIDDecision) {
+        int idLode = Integer.parseInt(NameIDDecision);
+
+        for (Ship tempShip : initialDemoData.getListOfShips()) {
+            if (tempShip.getId() == idLode) {
+                System.out.println(tempShip);
+                spatnyUdaj = false;
+            }
+        }
+        return spatnyUdaj;
+    }
+
 }
+
