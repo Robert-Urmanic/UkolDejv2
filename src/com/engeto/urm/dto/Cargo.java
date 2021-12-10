@@ -1,9 +1,10 @@
 package com.engeto.urm.dto;
 
 import java.util.Random;
+import java.util.UUID;
 
 public class Cargo {
-    private Integer id;
+    private UUID id;
     private String description;
     private Integer weight;
     private Integer totalPrice;
@@ -11,12 +12,12 @@ public class Cargo {
     public Cargo() {
     }
 
-    public Integer getId() {
+    public UUID getId() {
         return id;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setId() {
+        this.id = UUID.randomUUID();
     }
 
     public String getDescription() {

@@ -19,6 +19,7 @@ public class Route {
         minusovaRychlostKvuliNakladu1 = minusovaRychlostKvuliNakladu1.divide(new BigDecimal(100));
         BigDecimal minusovaRychlostKvuliNakladu2 = new BigDecimal(listOfShips.get(ship_id).getSeznamCargo().get(1).getWeight());
         minusovaRychlostKvuliNakladu2 = minusovaRychlostKvuliNakladu2.divide(new BigDecimal(100));
+        // TODO: 10.12.2021 vynásobit 0,2 
         BigDecimal minusovaRychlostKvuliNakladu3 = new BigDecimal(0);
         minusovaRychlostKvuliNakladu3 = minusovaRychlostKvuliNakladu1.add(minusovaRychlostKvuliNakladu2);
         BigDecimal prumernaRychlost = listOfShips.get(ship_id).getAverageSpeed().subtract(minusovaRychlostKvuliNakladu3);
@@ -33,8 +34,8 @@ public class Route {
     public Route(Port startPort, Port targetPort, BigDecimal distance, Integer ship_id, List<Ship> listOfShips) {
         this.ship_id = ship_id;
         this.startPort = startPort;
-        this.targetPort = targetPort;
-        this.distance = distance;
+        setTargetPort(targetPort);
+        setDistance(distance);
         this.travelTime = timeOfTravel(listOfShips);;
         // TODO: 08.12.2021 zkontrolovat jestli sedí id lodě
         setUuidLode();
@@ -70,6 +71,9 @@ public class Route {
     }
 
     public void setTargetPort(Port targetPort) {
+        if (getStartPort().equals(targetPort)){
+            throw new IllegalCallerException();
+        }
         this.targetPort = targetPort;
     }
 
@@ -78,6 +82,9 @@ public class Route {
     }
 
     public void setDistance(BigDecimal distance) {
+        if ((distance.compareTo(new BigDecimal(0)))<=0){
+            throw new IllegalArgumentException();
+        }
         this.distance = distance;
     }
 
@@ -87,8 +94,8 @@ public class Route {
                 "uuidLode=" + uuidRoute +
                 ", startPort=" + startPort +
                 ", targetPort=" + targetPort +
-                ", distance=" + distance +
-                ", travelTime=" + travelTime +
+                ", distance=" + distance + " km" +
+                ", travelTime=" + travelTime + " hours" +
                 ", ship_id=" + ship_id +
                 '}';
     }

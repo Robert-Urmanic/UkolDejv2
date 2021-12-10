@@ -33,8 +33,7 @@ public class InitialDemoData {
             listOfShips.add(ship);
             for (int j = 1; j <= 2; j++) {
                 Cargo cargo = new Cargo();
-                cargo.setId(i*j);
-                // TODO: 07.12.2021 opravit číslo ID carga 
+                cargo.setId();
                 cargo.setDescription(description[random.nextInt(description.length)]);
                 cargo.setWeight(new Random().nextInt(1001));
                 listOfCargo.add(cargo);
@@ -44,37 +43,30 @@ public class InitialDemoData {
             temporaryListOfCargo.clear();
         }
 
-        //System.out.println(listOfShips);
-
     }
     private static String[] description = {
-            "Descripton 1",
-            "Descripton 2",
-            "Descripton 3",
-            "Descripton 4",
-            "Descripton 5",
-            "Descripton 6",
+            "Přeprava opic",
+            "Přeprava denní stravy pro průměrného amerického občana",
+            "Přeprava RTX 3090TI",
+            "Přeprava \"darů\" CIA do blízkého východu",
+            "Přeprava důkazů proti Ferimu",
+            "Přeprava trapných vzpomínek, na které si vzpomenete, když jdete spát",
+            "Přeprava Jeffreyho Epsteina",
+            "Přeprava neprodaných CD Battlefieldu 2042",
     };
     private static String[] names = {
-            "Liam",
-            "Olivia",
-            "Noah",
-            "Emma",
-            "Oliver",
-            "Ava",
-            "William",
-            "Sophia",
-            "Elijah",
-            "Isabella",
-            "James",
-            "Charlotte",
-            "Benjamin",
-            "Amelia",
-            "Lucas",
-            "Mia",
-            "Mason",
-            "Harper",
-            "Ethan",
-            "Evelyn"
+            "Santa Maria",
+            "Mayflower",
+            "Bismarck",
+            "Black Pearl",
+            "Empress",
+            "Flying Dutchman",
+            "Hai Peng",
+            "Evergreen",
+            "Whiplash",
+            "Ryan Gosling",
+            "Cheems",
+            "Pepe",
+            "Doge",
     };
 }

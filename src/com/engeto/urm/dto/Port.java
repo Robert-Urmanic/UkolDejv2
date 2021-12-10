@@ -12,6 +12,4 @@ public enum Port {
     Jeddah,
     Savannah,
     Unknown;
-
-
 }

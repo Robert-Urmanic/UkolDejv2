@@ -1,0 +1,61 @@
+Ship{id=0, name='Flying Dutchman', capacity=19, isOnWay=true, countOfTransports=6, averageSpeed=41, seznamCargo=[Cargo{id=c61c5359-fdea-4688-8eb8-0da1093615c2, description='Přeprava trapných vzpomínek, na které si vzpomenete, když jdete spát', weight=300, totalPrice=null}
+, Cargo{id=3aebee79-d122-44ae-b037-5cfddce3a45d, description='Přeprava trapných vzpomínek, na které si vzpomenete, když jdete spát', weight=800, totalPrice=null}
+]}
+Ship{id=1, name='Hai Peng', capacity=72, isOnWay=true, countOfTransports=0, averageSpeed=98, seznamCargo=[Cargo{id=adae3e4b-da83-475b-8627-448d764320ed, description='Přeprava RTX 3090TI', weight=100, totalPrice=null}
+, Cargo{id=64a4ec54-2fbf-4d9e-bed6-b38e3bd201c5, description='Přeprava Jeffreyho Epsteina', weight=600, totalPrice=null}
+]}
+Ship{id=2, name='Black Pearl', capacity=2, isOnWay=false, countOfTransports=8, averageSpeed=76, seznamCargo=[Cargo{id=96441faa-8660-40fa-8ef7-9ee8803dddd3, description='Přeprava "darů" CIA do blízkého východu', weight=700, totalPrice=null}
+, Cargo{id=04a02fb8-4005-4215-bc89-dc1c9dfd6439, description='Přeprava denní stravy pro průměrného amerického občana', weight=600, totalPrice=null}
+]}
+Ship{id=3, name='Bismarck', capacity=79, isOnWay=false, countOfTransports=5, averageSpeed=72, seznamCargo=[Cargo{id=a680611e-48ad-42d9-b0f1-079faa924cf2, description='Přeprava "darů" CIA do blízkého východu', weight=600, totalPrice=null}
+, Cargo{id=d24d501b-7519-4cad-a1c6-b300dabaa449, description='Přeprava Jeffreyho Epsteina', weight=200, totalPrice=null}
+]}
+Ship{id=4, name='Pepe', capacity=83, isOnWay=false, countOfTransports=4, averageSpeed=90, seznamCargo=[Cargo{id=eea21642-1f66-489e-b873-deb3fc40325a, description='Přeprava důkazů proti Ferimu', weight=900, totalPrice=null}
+, Cargo{id=1f2811ac-364d-4d61-80a6-88dc53c0a3ab, description='Přeprava opic', weight=800, totalPrice=null}
+]}
+Ship{id=5, name='Santa Maria', capacity=66, isOnWay=true, countOfTransports=1, averageSpeed=80, seznamCargo=[Cargo{id=e80cf872-c80c-4d63-af60-e468be054bef, description='Přeprava denní stravy pro průměrného amerického občana', weight=0, totalPrice=null}
+, Cargo{id=aefc670d-ff6d-41e8-8a09-e037b045ca15, description='Přeprava trapných vzpomínek, na které si vzpomenete, když jdete spát', weight=800, totalPrice=null}
+]}
+Ship{id=6, name='Cheems', capacity=26, isOnWay=false, countOfTransports=6, averageSpeed=89, seznamCargo=[Cargo{id=19d1b53f-434f-4bc8-b118-9bce1fb2c6a0, description='Přeprava důkazů proti Ferimu', weight=800, totalPrice=null}
+, Cargo{id=d30ba98b-e54f-4294-82cb-4e62ddcc9b3d, description='Přeprava důkazů proti Ferimu', weight=200, totalPrice=null}
+]}
+Ship{id=7, name='Bismarck', capacity=0, isOnWay=true, countOfTransports=1, averageSpeed=70, seznamCargo=[Cargo{id=e9a99ee4-0ce4-4656-ae94-a112ebfc5ddd, description='Přeprava důkazů proti Ferimu', weight=600, totalPrice=null}
+, Cargo{id=7df18c1a-bdff-4315-9f0e-6bf4da9855d7, description='Přeprava trapných vzpomínek, na které si vzpomenete, když jdete spát', weight=700, totalPrice=null}
+]}
+Ship{id=8, name='Black Pearl', capacity=71, isOnWay=true, countOfTransports=4, averageSpeed=38, seznamCargo=[Cargo{id=1a0cd5f2-458d-4fec-bf20-8bddc540e404, description='Přeprava Jeffreyho Epsteina', weight=900, totalPrice=null}
+, Cargo{id=30e6126e-2015-4663-961b-0c2f03137988, description='Přeprava důkazů proti Ferimu', weight=800, totalPrice=null}
+]}
+Ship{id=9, name='Bismarck', capacity=73, isOnWay=true, countOfTransports=2, averageSpeed=75, seznamCargo=[Cargo{id=ff915d8a-37dc-452e-a8a4-cda12aaeb00f, description='Přeprava důkazů proti Ferimu', weight=200, totalPrice=null}
+, Cargo{id=eefc0930-0713-43fb-80f6-4265ae2413d2, description='Přeprava neprodaných CD Battlefieldu 2042', weight=900, totalPrice=null}
+]}
+Ship{id=10, name='Hai Peng', capacity=47, isOnWay=true, countOfTransports=5, averageSpeed=89, seznamCargo=[Cargo{id=bbff9f08-0be5-4125-82f7-c97ce20d3d19, description='Přeprava RTX 3090TI', weight=900, totalPrice=null}
+, Cargo{id=17c8de5a-b6de-4d14-91d0-8d674ff63102, description='Přeprava neprodaných CD Battlefieldu 2042', weight=100, totalPrice=null}
+]}
+Ship{id=11, name='Pepe', capacity=53, isOnWay=true, countOfTransports=2, averageSpeed=62, seznamCargo=[Cargo{id=13a77c05-0855-48a0-845d-23efee80c464, description='Přeprava neprodaných CD Battlefieldu 2042', weight=0, totalPrice=null}
+, Cargo{id=cc443652-05f2-4c0f-afb7-4636b509ba65, description='Přeprava opic', weight=100, totalPrice=null}
+]}
+Ship{id=12, name='Hai Peng', capacity=81, isOnWay=true, countOfTransports=4, averageSpeed=45, seznamCargo=[Cargo{id=3fd1c5b5-3e78-47a0-9323-13519e43fd9e, description='Přeprava neprodaných CD Battlefieldu 2042', weight=900, totalPrice=null}
+, Cargo{id=c7798abc-c0a5-4297-83e4-af9cb5b254fa, description='Přeprava denní stravy pro průměrného amerického občana', weight=100, totalPrice=null}
+]}
+Ship{id=13, name='Empress', capacity=29, isOnWay=true, countOfTransports=0, averageSpeed=69, seznamCargo=[Cargo{id=f05ba712-18b2-4ccc-a780-a3425dfa32e8, description='Přeprava "darů" CIA do blízkého východu', weight=600, totalPrice=null}
+, Cargo{id=fd1b2d61-cf0f-4e48-9147-b52e8d6a3d06, description='Přeprava opic', weight=0, totalPrice=null}
+]}
+Ship{id=14, name='Flying Dutchman', capacity=83, isOnWay=false, countOfTransports=10, averageSpeed=40, seznamCargo=[Cargo{id=34f5e50c-13d6-4d82-afbf-66880f8e041f, description='Přeprava RTX 3090TI', weight=500, totalPrice=null}
+, Cargo{id=c9904234-fa9f-4794-aeca-d03ef7035111, description='Přeprava denní stravy pro průměrného amerického občana', weight=600, totalPrice=null}
+]}
+Ship{id=15, name='Mayflower', capacity=34, isOnWay=true, countOfTransports=0, averageSpeed=86, seznamCargo=[Cargo{id=bc3db475-ce65-41fe-97ea-623080e8a5f8, description='Přeprava "darů" CIA do blízkého východu', weight=200, totalPrice=null}
+, Cargo{id=483973d8-ba52-40ae-b93a-b435482f58dd, description='Přeprava "darů" CIA do blízkého východu', weight=100, totalPrice=null}
+]}
+Ship{id=16, name='Whiplash', capacity=89, isOnWay=true, countOfTransports=3, averageSpeed=30, seznamCargo=[Cargo{id=3cdaedd6-eea5-4f70-ace6-978abb1e34ba, description='Přeprava neprodaných CD Battlefieldu 2042', weight=0, totalPrice=null}
+, Cargo{id=0ef2d0b7-28fc-461b-af90-3992d7ee9133, description='Přeprava opic', weight=600, totalPrice=null}
+]}
+Ship{id=17, name='Mayflower', capacity=1, isOnWay=true, countOfTransports=10, averageSpeed=41, seznamCargo=[Cargo{id=ccc36d2d-2754-4c3a-babf-60ec6ccb9575, description='Přeprava RTX 3090TI', weight=500, totalPrice=null}
+, Cargo{id=31807a9d-a8e0-4326-bca8-1003280ebe33, description='Přeprava "darů" CIA do blízkého východu', weight=900, totalPrice=null}
+]}
+Ship{id=18, name='Pepe', capacity=31, isOnWay=false, countOfTransports=3, averageSpeed=61, seznamCargo=[Cargo{id=48a4ef9d-a1ed-4d12-ade8-d8b344da6420, description='Přeprava Jeffreyho Epsteina', weight=0, totalPrice=null}
+, Cargo{id=afd46c2e-50b5-4c7e-b4de-82bbc7d7c926, description='Přeprava neprodaných CD Battlefieldu 2042', weight=900, totalPrice=null}
+]}
+Ship{id=19, name='Hai Peng', capacity=74, isOnWay=true, countOfTransports=1, averageSpeed=85, seznamCargo=[Cargo{id=e5b711ed-6973-4c8b-a0e4-07f1d0f17794, description='Přeprava důkazů proti Ferimu', weight=900, totalPrice=null}
+, Cargo{id=fd28d5ed-bd07-4bc7-a194-e3892bc74baa, description='Přeprava denní stravy pro průměrného amerického občana', weight=600, totalPrice=null}
+]}
+
