@@ -11,14 +11,13 @@ public class Route {
     private Port targetPort;
     private BigDecimal distance;
     private BigDecimal travelTime;
-    // TODO: 07.12.2021 id lodě 
     private Integer ship_id;
 
     public BigDecimal timeOfTravel(List<Ship> listOfShips) {
         BigDecimal minusovaRychlostKvuliNakladu1 = new BigDecimal(listOfShips.get(ship_id).getSeznamCargo().get(0).getWeight());
-        minusovaRychlostKvuliNakladu1 = minusovaRychlostKvuliNakladu1.divide(new BigDecimal(100));
+        minusovaRychlostKvuliNakladu1 = (minusovaRychlostKvuliNakladu1.divide(new BigDecimal(100))).multiply(new BigDecimal((0.2)));
         BigDecimal minusovaRychlostKvuliNakladu2 = new BigDecimal(listOfShips.get(ship_id).getSeznamCargo().get(1).getWeight());
-        minusovaRychlostKvuliNakladu2 = minusovaRychlostKvuliNakladu2.divide(new BigDecimal(100));
+        minusovaRychlostKvuliNakladu2 = (minusovaRychlostKvuliNakladu2.divide(new BigDecimal(100)).multiply(new BigDecimal((0.2))));
         // TODO: 10.12.2021 vynásobit 0,2 
         BigDecimal minusovaRychlostKvuliNakladu3 = new BigDecimal(0);
         minusovaRychlostKvuliNakladu3 = minusovaRychlostKvuliNakladu1.add(minusovaRychlostKvuliNakladu2);
@@ -37,7 +36,6 @@ public class Route {
         setTargetPort(targetPort);
         setDistance(distance);
         this.travelTime = timeOfTravel(listOfShips);;
-        // TODO: 08.12.2021 zkontrolovat jestli sedí id lodě
         setUuidLode();
 
     }

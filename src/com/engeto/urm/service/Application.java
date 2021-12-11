@@ -97,9 +97,9 @@ public class Application {
                 System.out.println(java.util.Arrays.asList(Port.values()));
                 System.out.println("Chcete to zkusit znovu? Y/n");
                 String opakovat = s.next();
-                if ("N".equals(opakovat.toUpperCase())) {
-                    System.exit(5318008);
-                }
+                if ("Y".equals(opakovat.toUpperCase())) {
+
+                }else System.exit(5318008);
             }
         }
         String tempHold = "";
