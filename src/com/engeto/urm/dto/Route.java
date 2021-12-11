@@ -18,7 +18,6 @@ public class Route {
         minusovaRychlostKvuliNakladu1 = (minusovaRychlostKvuliNakladu1.divide(new BigDecimal(100))).multiply(new BigDecimal((0.2)));
         BigDecimal minusovaRychlostKvuliNakladu2 = new BigDecimal(listOfShips.get(ship_id).getSeznamCargo().get(1).getWeight());
         minusovaRychlostKvuliNakladu2 = (minusovaRychlostKvuliNakladu2.divide(new BigDecimal(100)).multiply(new BigDecimal((0.2))));
-        // TODO: 10.12.2021 vynásobit 0,2 
         BigDecimal minusovaRychlostKvuliNakladu3 = new BigDecimal(0);
         minusovaRychlostKvuliNakladu3 = minusovaRychlostKvuliNakladu1.add(minusovaRychlostKvuliNakladu2);
         BigDecimal prumernaRychlost = listOfShips.get(ship_id).getAverageSpeed().subtract(minusovaRychlostKvuliNakladu3);
